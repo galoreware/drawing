@@ -11,40 +11,39 @@ using System.Drawing.Imaging;
 namespace Galoreware.Drawing
 {
     [StructLayout(LayoutKind.Explicit)]
-    public struct Pixel
+    public struct Colour
     {
-        [FieldOffset(0)]
+        [FieldOffset(2)]
         public byte R;
+
         [FieldOffset(1)]
         public byte G;
-        [FieldOffset(2)]
+        
+        [FieldOffset(0)]
         public byte B;
+        
         [FieldOffset(3)]
         public byte A;
 
         [FieldOffset(0)]
         public int Value;
-
-        [FieldOffset(4)]
-        public int X;
-
-        [FieldOffset(8)]
-        public int Y;
-
-        public void SetValue(Color c, int x = 0, int y = 0)
+        
+        public void SetValue(Color c)
         {
-            X = x;
-            Y = y;
-
             R = c.R;
             G = c.G;
             B = c.B;
             A = c.A;
         }
 
+        public Color AsColor()
+        {
+            return Color.FromArgb(Value);
+        }
+
         public override string ToString()
         {
-            return string.Format("{0},{1} - #{2:X2}{3:X2}{4:X2}@{5}", X, Y, R, G, B, A);
+            return string.Format("#{0:X2}{1:X2}{2:X2}@{3}", R, G, B, A);
         }
 
         public override bool Equals(object obj)
@@ -57,12 +56,12 @@ namespace Galoreware.Drawing
             return Value;
         }
 
-        public static bool operator ==(Pixel a, Pixel b)
+        public static bool operator ==(Colour a, Colour b)
         {
             return a.Value == b.Value;
         }
 
-        public static bool operator !=(Pixel a, Pixel b)
+        public static bool operator !=(Colour a, Colour b)
         {
             return a.Value != b.Value;
         }

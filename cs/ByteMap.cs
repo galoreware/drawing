@@ -10,7 +10,7 @@ namespace Galoreware.Drawing
 {
     public class ByteMap
     {
-        public Pixel[,] Pixels { get; set; }
+        public Colour[,] Pixels { get; set; }
 
         public int Width { get; set; }
         public int Height { get; set; }
@@ -22,18 +22,18 @@ namespace Galoreware.Drawing
             Width = source.Width;
             Height = source.Height;
 
-            Pixels = new Pixel[source.Width, source.Height];
+            Pixels = new Colour[source.Width, source.Height];
 
             for (int y = 0; y < source.Height; y++)
             {
                 for (int x = 0; x < source.Width; x++)
                 {
-                    Pixels[x, y].SetValue(source.GetPixel(x,y),x,y);
+                    Pixels[x, y].SetValue(source.GetPixel(x,y));
                 }
             }
 
             source.Dispose();
-        }
+        }//NEW
 
     }
 }
