@@ -8,7 +8,7 @@
     <ProjectGuid>{86A2D4F7-0C98-4EE6-BD63-46AEDF78BC17}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>galoreware.drawing</RootNamespace>
+    <RootNamespace>GaloreWare.Drawing</RootNamespace>
     <AssemblyName>galoreware.drawing</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>

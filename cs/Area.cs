@@ -5,7 +5,7 @@ using System.Text;
 
 using System.Drawing;
 
-namespace Galoreware.Drawing
+namespace GaloreWare.Drawing
 {
     public class Area
     {

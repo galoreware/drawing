@@ -6,7 +6,7 @@ using System.Text;
 using System.Drawing;
 using System.Drawing.Imaging;
 
-namespace Galoreware.Drawing
+namespace GaloreWare.Drawing
 {
     public class ByteMap
     {

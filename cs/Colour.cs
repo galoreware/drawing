@@ -8,7 +8,7 @@ using System.Runtime.InteropServices;
 using System.Drawing;
 using System.Drawing.Imaging;
 
-namespace Galoreware.Drawing
+namespace GaloreWare.Drawing
 {
     [StructLayout(LayoutKind.Explicit)]
     public struct Colour

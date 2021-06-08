@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Galoreware.Drawing
+namespace GaloreWare.Drawing
 {
     public class Point2D
     {
