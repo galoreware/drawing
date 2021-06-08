@@ -52,6 +52,12 @@
     <Compile Include="cs\Shape.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="galoreware.io\GaloreWare.IO.csproj">
+      <Project>{A9D1A00B-E730-4519-974E-A32C3F462972}</Project>
+      <Name>GaloreWare.IO</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

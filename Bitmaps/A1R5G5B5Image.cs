@@ -29,7 +29,7 @@ namespace GaloreWare.Drawing.Bitmaps
         {
             Pixel tmp = new Pixel(0, 0, 0, 255);
             
-            short data;
+            int data;
             
             int i=0;
 

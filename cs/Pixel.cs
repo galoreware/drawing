@@ -16,7 +16,7 @@ namespace GaloreWare.Drawing
             A = a;
         }
 
-        public Pixel(short data)
+        public Pixel(int data)
         {
             https://stackoverflow.com/questions/6700307/c-sharp-read-rgb-from-a1r5g5b5-image-type/6701049#6701049
 
