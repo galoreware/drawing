@@ -41,6 +41,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Bitmaps\BmpImage.cs" />
+    <Compile Include="Bitmaps\A1R5G5B5Image.cs" />
+    <Compile Include="cs\Pixel.cs" />
+    <Compile Include="Bitmaps\TgaImage.cs" />
     <Compile Include="cs\Area.cs" />
     <Compile Include="cs\ByteMap.cs" />
     <Compile Include="cs\Colour.cs" />
