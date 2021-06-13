@@ -46,7 +46,6 @@
     <Compile Include="cs\Pixel.cs" />
     <Compile Include="Bitmaps\TgaImage.cs" />
     <Compile Include="cs\Area.cs" />
-    <Compile Include="cs\ByteMap.cs" />
     <Compile Include="cs\Colour.cs" />
     <Compile Include="cs\Point2D.cs" />
     <Compile Include="cs\Shape.cs" />
