@@ -7,10 +7,12 @@ using GaloreWare.IO;
 
 namespace GaloreWare.Drawing.Bitmaps
 {
-    //Variable Bit Per Pixel TGA Bitmap Generator
+    /// <summary>
+    /// Variable Bit Per Pixel TGA Bitmap Generator
+    /// </summary>
     public class TgaImage
     {
-        ByteWrite _data;
+        Binary _data;
         short _w, _h, _bpp;
 
         public int Width { get { return _w; } }
@@ -18,10 +20,10 @@ namespace GaloreWare.Drawing.Bitmaps
 
         public TgaImage(string fileName)
         {
-            _data = new ByteWrite(fileName);
+            _data = new Binary(fileName);
 
-            _w = _data.ReadInt16(12);
-            _h = _data.ReadInt16(14);
+            _w = (short)_data.ReadInt16(12);
+            _h = (short)_data.ReadInt16(14);
             
             _bpp =(short)(_data[16] / 8);
         }
@@ -31,7 +33,7 @@ namespace GaloreWare.Drawing.Bitmaps
             _w = (short)w;
             _h = (short)h;
 
-            _data = new ByteWrite();
+            _data = new Binary();
 
             _data.Write(2, 2);//Image Type Code (Binary 2, uncompress RGB).
             _data.WriteInt16(12,_w);
