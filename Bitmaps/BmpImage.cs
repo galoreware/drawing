@@ -12,7 +12,7 @@ namespace GaloreWare.Drawing.Bitmaps
     /// </summary>
     public class BmpImage
     {
-        ByteWrite _data;
+        Binary _data;
         int _w, _h, _row_size, _data_size;
 
         public int Width { get { return _w; } }
@@ -20,7 +20,7 @@ namespace GaloreWare.Drawing.Bitmaps
 
         public BmpImage(string fileName)
         {
-            _data = new ByteWrite(fileName);
+            _data = new Binary(fileName);
 
             _w = _data.ReadInt32(0x12);
             _h = _data.ReadInt32(0x16);
@@ -36,7 +36,7 @@ namespace GaloreWare.Drawing.Bitmaps
 
             _data_size = _row_size * h;
 
-            _data = new ByteWrite(56);
+            _data = new Binary(56);
 
             //BMP HEADER (DOESN'T CHANGE AT ALL)
             _data.WriteASCII(0x0, "BM", 2);//BITMAP TYPE - BM = WINDOWS BITMAP

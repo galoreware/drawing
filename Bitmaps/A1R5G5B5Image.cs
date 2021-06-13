@@ -25,7 +25,7 @@ namespace GaloreWare.Drawing.Bitmaps
             _pixels = new Pixel[_w * _h];
         }
 
-        public void Read(ByteAccess buffer, int offset = 0)
+        public void Read(Binary buffer, int offset = 0)
         {
             Pixel tmp = new Pixel(0, 0, 0, 255);
             
@@ -37,7 +37,7 @@ namespace GaloreWare.Drawing.Bitmaps
             {
                 for (int x = 0; x < _w; x++)
                 {
-                    data = buffer.GetInt16((i * 2));
+                    data = buffer.ReadInt16((i * 2));
                     _pixels[i] = new Pixel(data);
                     i++;
                 }

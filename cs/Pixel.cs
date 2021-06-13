@@ -26,10 +26,11 @@ namespace GaloreWare.Drawing
         public byte A;
 
         [FieldOffset(0)]
-        public int Value = 0x00000000;//Transparent
+        public int Value;
 
         public Pixel(byte r, byte g, byte b, byte a = 255)
         {
+            Value = 0x00000000;//Transparent
             R = r;
             G = g;
             B = b;
@@ -38,6 +39,7 @@ namespace GaloreWare.Drawing
 
         public Pixel(int data)
         {
+            Value = 0x00000000;//Transparent
             //https://stackoverflow.com/questions/6700307/c-sharp-read-rgb-from-a1r5g5b5-image-type/6701049#6701049
 
             bool alpha = (data & 0x8000) > 0;
@@ -67,12 +69,12 @@ namespace GaloreWare.Drawing
             return Value;
         }
 
-        public static bool operator ==(Colour a, Colour b)
+        public static bool operator ==(Pixel a, Pixel b)
         {
             return a.Value == b.Value;
         }
 
-        public static bool operator !=(Colour a, Colour b)
+        public static bool operator !=(Pixel a, Pixel b)
         {
             return a.Value != b.Value;
         }
