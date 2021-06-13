@@ -7,6 +7,7 @@ using GaloreWare.IO;
 
 namespace GaloreWare.Drawing.Bitmaps
 {
+    //Variable Bit Per Pixel TGA Bitmap Generator
     public class TgaImage
     {
         ByteWrite _data;

@@ -7,6 +7,9 @@ using GaloreWare.IO;
 
 namespace GaloreWare.Drawing.Bitmaps
 {
+    /// <summary>
+    /// 24-Bit Hardcoded Windows Bitmap Generator
+    /// </summary>
     public class BmpImage
     {
         ByteWrite _data;
