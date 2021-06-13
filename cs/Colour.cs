@@ -10,6 +10,7 @@ using System.Drawing.Imaging;
 
 namespace GaloreWare.Drawing
 {
+    [Obsolete("Replace by Pixel", true)]
     [StructLayout(LayoutKind.Explicit)]
     public struct Colour
     {
